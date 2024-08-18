@@ -1,0 +1,51 @@
+body, html, #root {
+    overflow-x: hidden; 
+    background-color:#F6EACB;
+    
+}
+
+.cover {
+    height: 75%; 
+    background-color:#F6EACB;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+.card {
+    background-color: white;
+    border-radius: 15px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    padding: 20px;
+    max-width: 90%;
+    margin: 0 auto;
+    overflow: hidden;
+}
+
+.card img {
+    border-radius: 10px;
+    max-width: 100%;
+    height: auto;
+    display: block;
+}
+
+@media (max-width: 768px) {
+    .card {
+        padding: 15px;
+    }
+
+    .card img {
+        border-radius: 8px;
+    }
+}
+
+@media (max-width: 480px) {
+    .card {
+        padding: 10px;
+    }
+
+    .card img {
+        border-radius: 5px;
+    }
+}

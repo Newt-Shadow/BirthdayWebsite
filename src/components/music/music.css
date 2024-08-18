@@ -1,0 +1,28 @@
+@import url('https://fonts.googleapis.com/css2?family=Bungee&family=Satisfy&display=swap');
+
+.music {
+    padding-top: 2rem;
+    border-radius: 15px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    margin: 3rem;
+    padding-bottom: 2rem;
+    background-color: #FFF8F3;
+    background-image: url('../../assets/music.jpg');
+    background-size: fill;
+}
+
+.noMusic {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 2rem;
+    font-size: 3rem;
+    font-family: "Satisfy", cursive;
+    width: 50%;
+    margin-left: 25%;
+    font-style: normal;
+    color: #021526;
+    background-color: #6eabda87;
+    border-radius: 50px;
+
+}
