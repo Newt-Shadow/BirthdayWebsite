@@ -21,7 +21,7 @@ const YouTubeSearch = () => {
                 },
             });
             setVideos(response.data.items);
-            setSelectedVideo(null); // Reset selected video on new search
+            setSelectedVideo(null);
         } catch (error) {
             console.error("Error fetching videos:", error);
         }
@@ -38,7 +38,7 @@ const YouTubeSearch = () => {
                     type="text"
                     value={query}
                     onChange={(e) => setQuery(e.target.value)}
-                    placeholder="Search YouTube"
+                    placeholder="Search"
                 />
                 <button onClick={handleSearch}>Search</button>
             </div>

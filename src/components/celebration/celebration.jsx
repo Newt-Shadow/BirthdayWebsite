@@ -5,7 +5,7 @@ import Cards from '../cards/cards.jsx';
 
 function Celebration() {
     return (
-        <div className="celebration" >
+        <div className="celebration" id="join-us" >
             <div className="celeb" >
                 <div className="celeb_party">
                     <h2>Join us </h2>

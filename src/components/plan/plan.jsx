@@ -4,7 +4,7 @@ import './plan.css';
 
 function Fun() {
     return (
-        <div className="plan">
+        <div className="plan" id="plan">
             <div className="fun">
                 <div className="fs-1">
                     <p>Want To</p>
@@ -23,12 +23,11 @@ function Fun() {
                     <p>And</p>
                 </div>
                 <div className="fs-2">
-                    <p>Prepare For The Upcoming Unforgettable Moments</p>
+                    <p>Prepare For The Unforgettable Moments ...</p>
                 </div>
-
             </div>
         </div>
-    )
+    );
 }
 
 export default Fun;

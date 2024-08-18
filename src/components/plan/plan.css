@@ -7,39 +7,71 @@
     margin: 3rem;
     padding-bottom: 2rem;
     background-color: #FFF8F3;
-    background-image: url('../../assets/plan5.jpg');; 
-    background-size: cover; 
-    background-position: center; 
-    background-repeat: no-repeat; 
+    background-image: url('../../assets/plan5.jpg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
     color: #1E201E;
 }
 
-.fun{
+.fun {
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
     gap: 0.1rem;
-   
-    
 }
 
-.fs-1{
-    font-size: 1.6rem !important;
-    padding-bottom: 0 !important;
-    margin-bottom: 0 !important;
+.fs-1 {
+    font-size: 1.6rem;
+    padding-bottom: 0;
+    margin-bottom: 0;
     font-family: "Orbitron", sans-serif;
-    font-optical-sizing: auto;
     font-weight: 500;
-    font-style: normal;
 }
 
-.fs-2{
+.fs-2 {
     font-family: "Orbitron", sans-serif;
-    font-optical-sizing: auto;
     font-weight: 700;
-    font-style: normal;
-    font-size: 2.3rem !important;
+    font-size: 2.3rem;
     padding-bottom: 10px;
     padding-top: 10px;
+}
+
+@media (max-width: 768px) {
+    .plan {
+        margin: 1rem;
+        padding: 1rem;
+    }
+
+    .fun {
+        text-align: center;
+    }
+
+    .fs-1 {
+        font-size: 1.2rem;
+    }
+
+    .fs-2 {
+        font-size: 1.8rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .plan {
+        margin: 0.5rem;
+        padding: 0.5rem;
+    }
+
+    .fun {
+        text-align: center;
+    }
+
+    .fs-1 {
+        font-size: 1rem;
+    }
+
+    .fs-2 {
+        font-size: 1.5rem;
+    }
 }

@@ -9,8 +9,15 @@ import MenuIcon from '@mui/icons-material/Menu';
 import Container from '@mui/material/Container';
 import Button from '@mui/material/Button';
 import MenuItem from '@mui/material/MenuItem';
+import logo from '../../assets/logo.jpg';
 
-const pages = ['Products', 'Pricing', 'Blog'];
+const pages = [
+  { name: 'Home', href: '#home' },
+  { name: 'Join Us', href: '#join-us' },
+  { name: 'Plan', href: '#plan' },
+  { name: 'Greetings', href: '#greetings' },
+  {name: 'Location',href:'#location'}
+];
 
 function ResponsiveAppBar() {
   const [anchorElNav, setAnchorElNav] = React.useState(null);
@@ -24,27 +31,16 @@ function ResponsiveAppBar() {
   };
 
   return (
-    <AppBar position="relative" sx={{ backgroundColor: '#F6EACB', boxShadow: 'none' }}>
+    <AppBar position="relative" sx={{ backgroundColor: '#F6EACB', backgroundImage: 'url("https://www.transparenttextures.com/patterns/cubes.png")', boxShadow: 'none' }}>
       <Container maxWidth="xl">
         <Toolbar disableGutters>
-          <Typography
-            variant="h6"
-            noWrap
-            component="a"
-            href="#app-bar-with-responsive-menu"
-            sx={{
-              mr: 2,
-              display: { xs: 'none', md: 'flex' },
-              fontFamily: 'monospace',
-              fontWeight: 700,
-              letterSpacing: '.3rem',
-              color: 'black',
-              textDecoration: 'none',
-            }}
-          >
-            LOGO
-          </Typography>
-
+          <Box sx={{ flexGrow: 1, display: { xs: 'none', md: 'flex' } }}>
+            <img 
+              src={logo} 
+              alt="Logo" 
+              style={{ height: '50px', marginRight: '16px', opacity: 0.5 }} 
+            />
+          </Box>
           <Box sx={{ flexGrow: 1, display: { xs: 'flex', md: 'none' } }}>
             <IconButton
               size="large"
@@ -75,13 +71,19 @@ function ResponsiveAppBar() {
               }}
             >
               {pages.map((page) => (
-                <MenuItem key={page} onClick={handleCloseNavMenu}>
-                  <Typography textAlign="center">{page}</Typography>
+                <MenuItem key={page.name} onClick={handleCloseNavMenu}>
+                  <Typography 
+                    textAlign="center" 
+                    component="a" 
+                    href={page.href} 
+                    sx={{ fontWeight: 600, textDecoration: 'none', color: 'black' }}
+                  >
+                    {page.name}
+                  </Typography>
                 </MenuItem>
               ))}
             </Menu>
           </Box>
-
           <Typography
             variant="h5"
             noWrap
@@ -92,23 +94,34 @@ function ResponsiveAppBar() {
               display: { xs: 'flex', md: 'none' },
               flexGrow: 1,
               fontFamily: 'monospace',
-              fontWeight: 700,
+              fontWeight: 500,
               letterSpacing: '.3rem',
               color: 'black',
               textDecoration: 'none',
             }}
           >
-            LOGO
+            <img 
+              src={logo} 
+              alt="Logo" 
+              style={{ height: '50px', opacity: 0.5 }} 
+            />
           </Typography>
-
           <Box sx={{ flexGrow: 1, display: { xs: 'none', md: 'flex' } }}>
             {pages.map((page) => (
               <Button
-                key={page}
+                key={page.name}
                 onClick={handleCloseNavMenu}
-                sx={{ my: 2, color: 'black', display: 'block' }}
+                sx={{ 
+                  my: 2, 
+                  color: 'black', 
+                  display: 'block',
+                  fontWeight: 600,
+                  mx: 2
+                }}
+                component="a"
+                href={page.href}
               >
-                {page}
+                {page.name}
               </Button>
             ))}
           </Box>

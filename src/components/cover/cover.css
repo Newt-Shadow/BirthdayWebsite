@@ -1,12 +1,16 @@
-body, html, #root {
-    overflow-x: hidden; 
-    background-color:#F6EACB;
-    
+body,
+html,
+#root {
+    overflow-x: hidden;
+    background-color: #F6EACB;
+    background-image: url("https://www.transparenttextures.com/patterns/cubes.png");
+
 }
 
 .cover {
-    height: 75%; 
-    background-color:#F6EACB;
+    height: 75%;
+    background-color: #F6EACB;
+    background-image: url("https://www.transparenttextures.com/patterns/cubes.png");
     display: flex;
     justify-content: center;
     align-items: center;

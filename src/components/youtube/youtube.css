@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Bungee&family=Edu+VIC+WA+NT+Beginner:wght@400..700&family=Oleo+Script:wght@400;700&family=Satisfy&display=swap');
+
 .youtube-search {
     max-width: 1200px;
     margin: 0 auto;
@@ -5,7 +7,6 @@
     display: flex;
     flex-direction: column;
     align-items: center;
-    
 }
 
 .search-bar {
@@ -13,7 +14,6 @@
     justify-content: center;
     margin-bottom: 20px;
     width: 100%;
-    
 }
 
 .search-bar input {
@@ -29,7 +29,6 @@
     padding: 10px 20px;
     margin-left: 10px;
     border: none;
-    border-radius: 3px;
     background-color: #cc0000;
     color: white;
     cursor: pointer;
@@ -91,10 +90,20 @@
     margin-top: 20px;
 }
 
-/* Mobile responsiveness */
 @media (max-width: 768px) {
+    .search-bar {
+        flex-direction: column;
+        align-items: center;
+    }
+
     .search-bar input {
-        width: 200px;
+        width: 100%;
+        margin-bottom: 10px;
+    }
+
+    .search-bar button {
+        width: 100%;
+        margin-left: 0;
     }
 
     .video-item {
