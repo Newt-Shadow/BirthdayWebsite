@@ -1,0 +1,108 @@
+.grid-logo {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-top: 1rem;
+}
+
+.logo-banner-1 {
+    display: flex;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+    gap: 2rem;
+}
+
+.logo-1 {
+    width: 300px;
+    height: 340px;
+    background-color:#F7E7DC;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    border-radius: 20px;
+    transition: all 0.25s ease;
+    padding: 10px;
+}
+
+.image-1 {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+    border-radius: 15px;
+}
+
+.logo-1 h2 {
+    padding-bottom: 0;
+    margin-bottom: 0;
+    padding-top: 1rem;
+    font-size: 2.2rem;
+}
+
+.logo-1 p {
+    margin: 0;
+    padding-top: 5px;
+    text-align: center;
+    font-size: 1.4rem;
+    color: #333;
+}
+
+@media (max-width: 680px) {
+    .logo-banner-1 {
+        flex-direction: column;
+        align-items: center;
+        gap: 1rem;
+    }
+
+    .logo-1 {
+        width: 200px;
+        height: 240px;
+    }
+
+    .image-1 {
+        height: 120px;
+    }
+
+    .logo-1 h2 {
+        font-size: 1.5rem;
+    }
+
+    .logo-1 p {
+        font-size: 1rem;
+    }
+}
+
+@media (min-width: 680px) and (max-width: 1010px) {
+    .logo-banner-1 {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 1rem;
+    }
+
+    .logo-1 {
+       
+        width: 300px;
+        height: 273px;
+    }
+
+    .image-1 {
+        height: 150px;
+    }
+
+    .logo-1 h2 {
+        font-size: 1.rem;
+    }
+
+    .logo-1 p {
+        font-size: 1rem;
+    }
+}
+
+.text_info {
+    font-family: "Jersey 10", sans-serif;
+    font-style: normal;
+}
+
+.al-c {
+    text-align: center;
+}
