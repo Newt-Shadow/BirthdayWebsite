@@ -3,7 +3,7 @@ import './special.css';
 
 function Special() {
     return (
-        <div className="specials">
+        <div className="specials" id="special">
             <div className="birthdayCard">
                 <div className="cardFront">
                     <h3 className="happy">HAPPY BIRTHDAY !</h3>
