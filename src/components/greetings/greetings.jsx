@@ -5,18 +5,19 @@ import { getFirestore, collection, addDoc, serverTimestamp } from "firebase/fire
 import './greetings.css';
 
 const firebaseConfig = {
-    apiKey: process.env.REACT_APP_FIREBASE_API_KEY,
-    authDomain: process.env.REACT_APP_FIREBASE_AUTH_DOMAIN,
-    projectId: process.env.REACT_APP_FIREBASE_PROJECT_ID,
-    storageBucket: process.env.REACT_APP_FIREBASE_STORAGE_BUCKET,
-    messagingSenderId: process.env.REACT_APP_FIREBASE_MESSAGING_SENDER_ID,
-    appId: process.env.REACT_APP_FIREBASE_APP_ID,
-    measurementId: process.env.REACT_APP_FIREBASE_MEASUREMENT_ID
+    apiKey: import.meta.env.VITE_FIREBASE_API_KEY,
+    authDomain: import.meta.env.VITE_FIREBASE_AUTH_DOMAIN,
+    projectId: import.meta.env.VITE_FIREBASE_PROJECT_ID,
+    storageBucket: import.meta.env.VITE_FIREBASE_STORAGE_BUCKET,
+    messagingSenderId: import.meta.env.VITE_FIREBASE_MESSAGING_SENDER_ID,
+    appId: import.meta.env.VITE_FIREBASE_APP_ID,
+    measurementId: import.meta.env.VITE_FIREBASE_MEASUREMENT_ID
 };
+
 
 const app = initializeApp(firebaseConfig);
 const db = getFirestore(app);
-const contactDatabase = ref(getDatabase(app), "contactForm");
+const contactDatabase = ref(getDatabase(app), "greetings");
 
 const Greetings = () => {
     const [formData, setFormData] = useState({ name: '', message: '' });
@@ -35,16 +36,21 @@ const Greetings = () => {
         }
 
         try {
+           
             const newContactForm = push(contactDatabase);
             set(newContactForm, formData);
 
-            await addDoc(collection(db, "contactForm"), {
+            
+            await addDoc(collection(db, "greetings"), {
                 ...formData,
                 timestamp: serverTimestamp()
             });
 
+            e
             setAlertVisible(true);
             setTimeout(() => setAlertVisible(false), 3000);
+
+            
             setFormData({ name: '', message: '' });
         } catch (error) {
             console.error("Error writing document: ", error);
@@ -54,7 +60,7 @@ const Greetings = () => {
     return (
         <div className="contact-container" id="greetings">
             <div className={`alert alert-success p-2 ${alertVisible ? 'show' : ''}`}>
-                Greetings Sent Successfully!
+                Greetings Sent ➤
             </div>
             <form id="contactForm" onSubmit={handleSubmit} method='post'>
                 <div className="form-grp">

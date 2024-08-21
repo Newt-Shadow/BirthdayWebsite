@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import axios from "axios";
 import './youtube.css';
 
-const YOUTUBE_API_KEY = process.env.REACT_APP_YOUTUBE_API_KEY;
+const youtubeApiKey = import.meta.env.VITE_YOUTUBE_API_KEY;
 
 const YouTubeSearch = () => {
     const [query, setQuery] = useState("");
@@ -17,7 +17,7 @@ const YouTubeSearch = () => {
                     q: query,
                     type: 'video',
                     maxResults: 10,
-                    key: YOUTUBE_API_KEY,
+                    key: youtubeApiKey, // Use the correct API key variable
                 },
             });
             setVideos(response.data.items);

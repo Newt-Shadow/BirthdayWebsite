@@ -11,21 +11,23 @@ import cake from '../../assets/cake.jpg';
 import food from '../../assets/food.jpg';
 import resort from '../../assets/resort.jpg';
 
-function Home (){
+
+function Home() {
     return (
-        
+
         <div id="specials">
-            <Special/>
+
+            <Special />
             <Cover />
-                        <Celebration />
-                        <Fun />
-                        <Music />
-                        <Location />
-                        <Carousel
-                            image1={cake}
-                            image2={food}
-                            image3={resort}
-                        />
+            <Celebration />
+            <Fun />
+            <Music />
+            <Location />
+            <Carousel
+                image1={cake}
+                image2={food}
+                image3={resort}
+            />
         </div>
     )
 }
