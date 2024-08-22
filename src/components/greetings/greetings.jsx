@@ -14,6 +14,9 @@ const firebaseConfig = {
     measurementId: process.env.REACT_APP_FIREBASE_MEASUREMENT_ID
 };
 
+console.log(process.env.REACT_APP_FIREBASE_API_KEY);
+
+
 const app = initializeApp(firebaseConfig);
 const db = getFirestore(app);
 const greetingsDatabase = ref(getDatabase(app), "greetings");
