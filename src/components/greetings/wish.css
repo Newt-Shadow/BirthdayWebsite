@@ -1,0 +1,49 @@
+@import url('https://fonts.googleapis.com/css2?family=Bungee&family=Edu+VIC+WA+NT+Beginner:wght@400..700&family=Oleo+Script:wght@400;700&family=Satisfy&display=swap');
+
+.wish {
+    font-family: "Edu VIC WA NT Beginner", cursive;
+    font-optical-sizing: auto;
+    font-style: normal;
+    display: flex;
+    justify-content: center;
+    font-size: 2rem;
+    font-weight: 500;
+    text-align: center;
+}
+
+.wishes {
+    padding-top: 2rem;
+    border-radius: 15px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    margin: 3rem;
+    padding-bottom: 2rem;
+    background-image: url('../../assets/bgm.jpg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+
+@media (max-width: 768px) {
+    .wishes {
+        margin: 1.5rem;
+        padding-top: 1.5rem;
+        padding-bottom: 1.5rem;
+    }
+
+    .wish {
+        font-size: 1.5rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .wishes {
+        margin: 1rem;
+        padding-top: 1rem;
+        padding-bottom: 1rem;
+    }
+
+    .wish {
+        font-size: 1.2rem;
+    }
+}
