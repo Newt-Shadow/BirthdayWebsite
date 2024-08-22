@@ -1,6 +1,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Bungee&family=Edu+VIC+WA+NT+Beginner:wght@400..700&family=Oleo+Script:wght@400;700&family=Satisfy&display=swap');
 
-.contact-container {
+.greetings-container {
     max-width: 820px;
     margin: 0 auto;
     margin-top: 1rem;
@@ -68,7 +68,7 @@ textarea::-webkit-scrollbar-thumb:hover {
 }
 
 @media (max-width: 768px) {
-    .contact-container {
+    .greetings-container {
         padding: 15px;
         margin: 0 1.5rem;
     }
@@ -84,7 +84,7 @@ textarea::-webkit-scrollbar-thumb:hover {
 }
 
 @media (max-width: 480px) {
-    .contact-container {
+    .greetings-container {
         padding: 10px;
         margin: 0 1rem;
     }

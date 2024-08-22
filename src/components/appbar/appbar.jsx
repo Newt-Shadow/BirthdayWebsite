@@ -1,6 +1,6 @@
 import React from 'react';
-import { NavLink } from 'react-router-dom';
-import logo from '../../assets/logo.jpg'; // Replace with the correct path to your logo
+import { Link } from 'react-router-dom';
+import './responsiveAppBar.css';
 
 const pages = [
   { name: 'Home', href: '/' },
@@ -11,27 +11,69 @@ const pages = [
 ];
 
 function ResponsiveAppBar() {
-  return (
-    <div className="container">
-    <header className="d-flex flex-wrap justify-content-center py-3 mb-4 border-bottom">
-      <a href="/" className="d-flex align-items-center mb-3 mb-md-0 me-md-auto link-body-emphasis text-decoration-none">
-        <svg className="bi me-2" width="40" height="32">
-          <use xlinkHref="#bootstrap"></use>
-        </svg>
-        <span className="fs-4">Simple header</span>
-      </a>
+  
+  const closeOffcanvas = () => {
+    const offcanvasElement = document.getElementById('offcanvasNavbar');
+    if (offcanvasElement) {
+      const bsOffcanvas = new window.bootstrap.Offcanvas(offcanvasElement); 
+      bsOffcanvas.hide();
+    }
+  };
 
-      <ul className="nav nav-pills">
-        {pages.map((page, index) => (
-          <li className="nav-item" key={index}>
-            <a href={page.href} className="nav-link">
-              {page.name}
-            </a>
-          </li>
-        ))}
-      </ul>
-    </header>
-  </div>
+  return (
+    <nav className="navbar navbar-expand-lg navbar-dark" style={{backgroundImage:'url("https://www.transparenttextures.com/patterns/cubes.png")'}}>
+      <div className="container-fluid">
+        <div className="navbar-brand typograph brand-black" >
+        
+          Happy Birthday
+        </div>
+        <button
+          className="navbar-toggler shadow-none border-0 burger-black"
+          type="button"
+          data-bs-toggle="offcanvas"
+          data-bs-target="#offcanvasNavbar"
+          aria-controls="offcanvasNavbar"
+          aria-label="Toggle navigation"
+          id="OpenMenu"
+        >
+          <span className="navbar-toggler-icon"></span>
+        </button>
+        <div
+          className="offcanvas offcanvas-end sidebar offcanvas-custom bg-transparent"
+          data-bs-scroll="true"
+          data-bs-backdrop="true"
+          tabIndex="-1"
+          id="offcanvasNavbar"
+          aria-labelledby="offcanvasNavbarLabel"
+        >
+          <div className="offcanvas-header text-white border-bottom">
+            <h5 className="offcanvas-title typograph" id="offcanvasNavbarLabel">Menu</h5>
+            <button
+              type="button"
+              className="btn-close btn-close-white shadow-none"
+              data-bs-dismiss="offcanvas"
+              aria-label="Close"
+            ></button>
+          </div>
+          <div className="offcanvas-body ">
+            <ul className="navbar-nav justify-content-end flex-grow-1 pe-3">
+              {pages.map((page, index) => (
+                <li className="nav-item" key={index}>
+                  <Link
+                    to={page.href}
+                    className="nav-link mx-2 typograph custom-link"
+                    onClick={closeOffcanvas}
+                  >
+                    {page.name}
+                  </Link>
+                </li>
+              ))}
+              
+            </ul>
+          </div>
+        </div>
+      </div>
+    </nav>
   );
 }
 
