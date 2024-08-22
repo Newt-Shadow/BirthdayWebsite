@@ -1,0 +1,21 @@
+
+.rsvp-button {
+    padding: 10px 20px;
+    font-size: 1.1em;
+    color: white;
+    background-color:#71C9CE; 
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+   width: 120px;
+    position: relative;
+    text-align: center;
+    height: 43px;
+    padding-top: 7px;
+    
+}
+
+.rsvp-button:hover {
+    background-color: #00ADB5;
+}
