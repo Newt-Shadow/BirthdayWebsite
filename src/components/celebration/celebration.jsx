@@ -5,7 +5,7 @@ import cardInfo from "../../database/partyinfo.js";
 
 function Celebration() {
     return (
-        <div className="celebration" id="join-us">
+        <div className="celebration" >
             <div className="celeb">
                 <div className="celeb_party">
                     <h2>Join us</h2>

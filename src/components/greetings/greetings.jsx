@@ -18,7 +18,7 @@ const app = initializeApp(firebaseConfig);
 const db = getFirestore(app);
 const greetingsDatabase = ref(getDatabase(app), "greetings");
 
-const Greetings = () => {
+function Greetings() {
     const [formData, setFormData] = useState({ name: '', message: '' });
     const [alertVisible, setAlertVisible] = useState(false);
 
@@ -53,7 +53,7 @@ const Greetings = () => {
     };
 
     return (
-        <div className="greetings-container" id="greetings">
+        <div className="greetings-container" >
             <div className={`alert alert-success p-2 ${alertVisible ? 'show' : ''}`}>
                 Greetings Sent ➤
             </div>

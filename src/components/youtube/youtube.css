@@ -17,7 +17,7 @@
 }
 
 .search-bar input {
-    width: 300px;
+    width: 600px;
     padding: 10px;
     border-radius: 3px;
     border: 1px solid #ccc;
@@ -32,8 +32,9 @@
     background-color: #cc0000;
     color: white;
     cursor: pointer;
-    font-size: 16px;
+    font-size: 20px;
     border-radius: 50px;
+    width: 150px;
 }
 
 .video-list {

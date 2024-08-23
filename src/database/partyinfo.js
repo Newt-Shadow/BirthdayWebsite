@@ -1,6 +1,6 @@
 import foodImage from '../assets/food.jpg';
 import cakeImage from '../assets/cake.jpg';
-import gamesImage from '../assets/games.jpg';
+import gamesImage from '../assets/games.avif';
 import surprisesImage from '../assets/surprises.jpg'; 
 
 const cardInfo = [

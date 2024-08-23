@@ -4,7 +4,7 @@ import './plan.css';
 
 function Fun() {
     return (
-        <div className="plan" id="plan">
+        <div className="plan" >
             <div className="fun">
                 <div className="fs-1">
                     <p>Want To</p>

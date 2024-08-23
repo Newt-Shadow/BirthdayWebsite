@@ -5,20 +5,20 @@ import YouTubeSearch from "../youtube/youtube";
 
 function Music() {
     return (
-        <div className="music">
+        <div className="music" id="music">
 
             <div className="row featurette">
-                <div className="col-md-7">
-                    <h2 className="featurette-heading fw-normal lh-1">First featurette heading. <span className="text-body-secondary">It’ll blow your mind.</span></h2>
-                    <p className="lead">Some great placeholder content for the first featurette here. Imagine some exciting prose here.</p>
-                </div>
+                <div className="musicColor">
+                    <h2 className="featurette-heading fw-normal lh-1">The table is set, the presents are wrapped, <span className="text-body-secondary">and the decorations perfect. </span></h2>
+                    <p className="lead">Now all that’s left is to make this birthday one to remember with some Music.</p>
+                    </div>
                 <div className="col-md-5">
-                <YouTubeSearch />
+                
                 </div>
                 
             </div>
 
-
+            <YouTubeSearch />
            
         </div >
     );

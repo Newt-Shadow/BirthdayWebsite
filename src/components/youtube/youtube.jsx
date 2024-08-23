@@ -4,7 +4,7 @@ import './youtube.css';
 
 const youtubeApiKey = process.env.REACT_APP_YOUTUBE_API_KEY;
 
-const YouTubeSearch = () => {
+function YouTubeSearch() {
     const [query, setQuery] = useState("");
     const [videos, setVideos] = useState([]);
     const [selectedVideo, setSelectedVideo] = useState(null);
@@ -17,7 +17,7 @@ const YouTubeSearch = () => {
                     q: query,
                     type: 'video',
                     maxResults: 10,
-                    key: youtubeApiKey, // Use the correct API key variable
+                    key: youtubeApiKey, 
                 },
             });
             setVideos(response.data.items);

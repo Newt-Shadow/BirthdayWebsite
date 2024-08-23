@@ -1,16 +1,16 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import './responsiveAppBar.css';
+import './AppBar.css';
 
 const pages = [
   { name: 'Home', href: '/' },
   { name: 'Join Us', href: '/join-us' },
-  { name: 'Plan', href: '/plan' },
+  { name: 'Music', href: '/music' },
   { name: 'Greetings', href: '/greetings' },
   { name: 'Location', href: '/location' }
 ];
 
-function ResponsiveAppBar() {
+function AppBar() {
   
   const closeOffcanvas = () => {
     const offcanvasElement = document.getElementById('offcanvasNavbar');
@@ -47,7 +47,7 @@ function ResponsiveAppBar() {
           aria-labelledby="offcanvasNavbarLabel"
         >
           <div className="offcanvas-header text-white border-bottom">
-            <h5 className="offcanvas-title typograph" id="offcanvasNavbarLabel">Menu</h5>
+            <h5 className="offcanvas-title typograph typo" id="offcanvasNavbarLabel">Menu</h5>
             <button
               type="button"
               className="btn-close btn-close-white shadow-none"
@@ -61,7 +61,7 @@ function ResponsiveAppBar() {
                 <li className="nav-item" key={index}>
                   <Link
                     to={page.href}
-                    className="nav-link mx-2 typograph custom-link"
+                    className="nav-link mx-2 typograph typo custom-link"
                     onClick={closeOffcanvas}
                   >
                     {page.name}
@@ -77,4 +77,4 @@ function ResponsiveAppBar() {
   );
 }
 
-export default ResponsiveAppBar;
+export default AppBar;
